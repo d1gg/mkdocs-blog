@@ -1,0 +1,28 @@
+yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+site_name: Mikes Blog
+site_url: https://michel.uber.space/
+
+theme:
+   name: material
+   palette:
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+   - search
+   - blog:
+       blog_dir: .
+
+#nav:
+#   - Start: index.md
+#   - Blog: blog/
