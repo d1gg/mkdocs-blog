@@ -1,0 +1,28 @@
+name: Deploy MkDocs
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install MkDocs
+        run: pip install mkdocs-material
+
+      - name: Build site
+        run: mkdocs build
+
+      - name: Deploy to Uberspace
+        uses: burnett01/rsync-deployments@v7
+        with:
+          switches: -avz --delete
+          path: site/
+          remote_path: /home/michel/html/
+          remote_host: michel.uber.space
+          remote_user: michel
+          remote_key: ${{ secrets.UBERSPACE_SSH_KEY }}
