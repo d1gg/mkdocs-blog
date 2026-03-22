@@ -18,7 +18,7 @@ jobs:
         run: mkdocs build
 
       - name: Deploy to Uberspace
-        uses: burnett01/rsync-deployments@v7
+        uses: burnett01/rsync-deployments@v6.0
         with:
           switches: -avz --delete
           path: site/
