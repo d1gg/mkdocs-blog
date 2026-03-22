@@ -1,4 +1,4 @@
-- name: Deploy to Uberspace
+  name: Deploy to Uberspace
   uses: easingthemes/ssh-deploy@v5.1.0
   env:
     SSH_PRIVATE_KEY: ${{ secrets.UBERSPACE_SSH_KEY }}
