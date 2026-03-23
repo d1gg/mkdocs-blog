@@ -24,6 +24,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.UBERSPACE_SSH_KEY }}
           ARGS: "-avz --delete"
           SOURCE: "site/"
-          REMOTE_HOST: "michel.uber.space"
+          REMOTE_HOST: "lepus.uberspace.de"
           REMOTE_USER: "michel"
           TARGET: "/home/michel/html/"
