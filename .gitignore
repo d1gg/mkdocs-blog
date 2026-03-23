@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Editor backups
+*.save
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# MkDocs build
+site/
